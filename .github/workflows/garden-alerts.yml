@@ -1,0 +1,31 @@
+name: Daily Garden Weather Alerts
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Runs daily at 6:00 AM UTC
+  workflow_dispatch:      # Allows manual trigger from GitHub UI
+
+jobs:
+  check-weather:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run weather alert script
+        env:
+          ACCUWEATHER_API_KEY: ${{ secrets.ACCUWEATHER_API_KEY }}
+          LOCATION_KEY: ${{ secrets.LOCATION_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        run: node weather-alert.js

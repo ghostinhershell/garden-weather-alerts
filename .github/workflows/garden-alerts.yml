@@ -25,7 +25,5 @@ jobs:
         env:
           ACCUWEATHER_API_KEY: ${{ secrets.ACCUWEATHER_API_KEY }}
           LOCATION_KEY: ${{ secrets.LOCATION_KEY }}
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node weather-alert.js

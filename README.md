@@ -1,4 +1,4 @@
-# garden-weather-alerts
+# garden-weather-alerts 🪴
 Repository containing automated weather alerts for my garden using GitHub Actions, GitHub Copilot, and AccuWeather’s API.
 
 This project checks the weather forecast for your location daily and creates GitHub issues with personalized gardening recommendations based on the forecasted conditions.

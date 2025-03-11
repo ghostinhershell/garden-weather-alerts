@@ -10,4 +10,4 @@ This project checks the weather forecast for your location daily and creates Git
 - **GitHub Issues**: Creates GitHub issues with detailed alerts and gardening advice.
 - **Automation**: Runs automatically on a schedule using GitHub Actions.
 
-Want to build this yourself? [Check out the How To here]().
+Want to build this yourself? [Check out the How to here]().
